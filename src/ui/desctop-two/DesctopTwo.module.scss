@@ -1,0 +1,11 @@
+.mainBlock{
+    display: flex;
+    background: #E5E5E5;
+    justify-content: center;
+    padding: 40px 80px 10px 80px;
+
+    .sideBar{
+        display: flex;
+        flex-direction: column;
+    }
+}
