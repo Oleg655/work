@@ -1,16 +1,29 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import style from "./Search.module.scss";
+import axios from "axios";
 
 const Search = () => {
   const dispatch = useDispatch();
   const searchData = useSelector((state) => state.searchData);
 
+  // const autocomplete = () => {
+  //   return axios.get(
+  //     "http://autocomplete.travelpayouts.com/places2?term=Mos&locale=ru&types[]=country&callback=function"
+  //   );
+  // };
+
+  //http://engine.hotellook.com/api/v2/lookup.json?query=moscow&lang=ru&lookFor=both&limit=1
+
   return (
     <>
       <div className={style.locationBlock}>
         Локация
-        <input value={searchData.location} className={style.input} />
+        <input
+          
+          
+          className={style.input}
+        />
         Дата заселения
         <input className={style.input} type="date" />
         Количество дней
