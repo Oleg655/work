@@ -1,11 +1,11 @@
 import { useFormik } from "formik";
 import React from "react";
 import style from "./LoginForm.module.scss";
-import { Link } from "react-router-dom";
-
-
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -30,30 +30,31 @@ const LoginForm = () => {
     },
 
     onSubmit: (values) => {
-      alert(JSON.stringify(values));
-      formik.resetForm()
+      if (values) {
+        navigate("/hotels");
+      }
+
+      formik.resetForm();
     },
   });
 
   return (
     <form className={style.formBlock} onSubmit={formik.handleSubmit}>
       Логин
-      <input
-        className={style.input}
-        {...formik.getFieldProps("email")}
-      />
+      <input className={style.input} {...formik.getFieldProps("email")} />
       {formik.touched.email && formik.errors.email ? (
         <div style={{ color: "red" }}>{formik.errors.email}</div>
       ) : null}
       Пароль
-      <input
-        {...formik.getFieldProps("password")}
-        className={style.input}
-      />
+      <input {...formik.getFieldProps("password")} className={style.input} />
       {formik.touched.password && formik.errors.password ? (
         <div style={{ color: "red" }}>{formik.errors.password}</div>
       ) : null}
-      <Link to={'/hotels'}><div><button type="submit" className={style.button}>Войти</button></div></Link>
+      <div>
+        <button type="submit" className={style.button}>
+          Войти
+        </button>
+      </div>
     </form>
   );
 };

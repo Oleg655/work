@@ -8,12 +8,11 @@ align-items: center;
     flex-direction: row;
     align-items: flex-start;
     padding: 15px;
+    outline: none;
 
-    position: static;
     width: 345px;
     height: 50px;
-    left: 0px;
-    top: 26px;
+    
 
     background: #ffffff;
     border: 1px solid #c9cacc;
@@ -26,12 +25,13 @@ align-items: center;
     justify-content: center;
     align-items: center;
     padding: 7px;
+    color: white;
+    cursor: pointer;
+    outline: none;
 
     position: static;
     width: 345px;
     height: 50px;
-    left: 32px;
-    top: 300px;
 
     background: linear-gradient(104.34deg, #41522e -15.34%, #be8022 145.95%);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
@@ -41,6 +41,6 @@ align-items: center;
     order: 1;
     align-self: stretch;
     flex-grow: 0;
-    margin: 32px 0px;
+    margin-top: 21px;
   }
 }

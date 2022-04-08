@@ -1,19 +1,24 @@
 import React from "react";
-import style from './Favourites.module.scss'
+import Hotel from "../hotels/hotel/Hotel";
+import style from "./Favourites.module.scss";
+import { useSelector } from "react-redux";
 
 const Favourites = () => {
-    return <>
-    
-    <div className={style.favoutitesBlock}>
+  const favourites = useSelector((state) => state.hotels.favourites);
+
+  return (
+    <>
+      <div className={style.favoutitesBlock}>
         <h1>Избранное</h1>
 
         <div>
-            <input placeholder="Рейтинг" type='number' />
-            <input placeholder="Цена" type='number' />
+          <input className={style.input} placeholder="Рейтинг" type="number" />
+          <input className={style.input} placeholder="Цена" type="number" />
         </div>
-    </div>
-    
+        {/* {favourites.map((i) => <Hotel/>)} */}
+      </div>
     </>
-}
+  );
+};
 
 export default Favourites;

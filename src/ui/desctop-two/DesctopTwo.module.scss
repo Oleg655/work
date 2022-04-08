@@ -1,11 +1,25 @@
-.mainBlock{
+.mainBlock {
+  display: flex;
+  flex-direction: column;
+  background: #e5e5e5;
+  justify-content: center;
+  min-height: 100vh;
+  .header {
     display: flex;
-    background: #E5E5E5;
-    justify-content: center;
-    padding: 40px 80px 10px 80px;
-
-    .sideBar{
-        display: flex;
-        flex-direction: column;
+    justify-content: space-between;
+    .logout {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
     }
+  }
+  .desctopBlock {
+    display: flex;
+justify-content: center;
+    .sideBar {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10px;
+    }
+  }
 }

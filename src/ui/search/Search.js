@@ -1,0 +1,26 @@
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import style from "./Search.module.scss";
+
+const Search = () => {
+  const dispatch = useDispatch();
+  const searchData = useSelector((state) => state.searchData);
+
+  return (
+    <>
+      <div className={style.locationBlock}>
+        Локация
+        <input value={searchData.location} className={style.input} />
+        Дата заселения
+        <input className={style.input} type="date" />
+        Количество дней
+        <input value={searchData.days} className={style.input} type="number" />
+        <div>
+          <button className={style.button}>Найти</button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Search;
