@@ -1,0 +1,19 @@
+.hotelBlock {
+  display: flex;
+  .imageBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: rgb(247, 247, 243);
+    border-radius: 50%;
+    .image {
+      width: 45px;
+      height: 45px;
+     
+        
+    }
+  }
+  
+}

@@ -1,60 +1,14 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
 .locationBlock {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 32px;
+  @include sidebar(center);
   margin-bottom: 10px;
-
-  width: 360px;
-  height: 410px;
-  
-  background: #ffffff;
-
-  box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
-  border-radius: 16px;
   .input {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 15px;
-    outline: none;
-    
-    position: static;
-    width: 296px;
-    height: 50px;
-    left: 0px;
-    top: 26px;
-    
-    background: #FFFFFF;
-    border: 1px solid #C9CACC;
-    box-sizing: border-box;
-    border-radius: 4px;
+    @include formControl(296px);
   }
-  .button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 7px;
-    color: white;
-    cursor: pointer;
-    border: 1px;
-    
-    
-    position: static;
-    width: 296px;
-    height: 50px;
-    left: 32px;
-    top: 328px;
-    
-    background: linear-gradient(104.34deg, #41522E -15.34%, #BE8022 145.95%);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    margin: 32px 0px;
+  .button {
+    @include buttonControl(296px);
+   
   }
 }

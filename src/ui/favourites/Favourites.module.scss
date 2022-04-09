@@ -1,17 +1,13 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
 .favoutitesBlock {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 32px;
-
-  width: 360px;
-  height: 410px;
-
-  background: #ffffff;
-
-  box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
-  border-radius: 16px;
+  @include sidebar(flex-start);
+  
   .input {
     outline: none;
+  }
+  .favourite{
+    display: flex
   }
 }

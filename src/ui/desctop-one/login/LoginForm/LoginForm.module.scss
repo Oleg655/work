@@ -1,46 +1,15 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/variables.scss";
+
 .formBlock {
-display: flex;
-flex-direction: column;
-align-items: center;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .input {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 15px;
-    outline: none;
-
-    width: 345px;
-    height: 50px;
-    
-
-    background: #ffffff;
-    border: 1px solid #c9cacc;
-    box-sizing: border-box;
-    border-radius: 4px;
+    @include formControl(345px);
   }
   .button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 7px;
-    color: white;
-    cursor: pointer;
-    outline: none;
-
-    position: static;
-    width: 345px;
-    height: 50px;
-
-    background: linear-gradient(104.34deg, #41522e -15.34%, #be8022 145.95%);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    margin-top: 21px;
+    @include buttonControl(345px);
   }
 }

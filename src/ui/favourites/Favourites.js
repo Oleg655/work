@@ -4,7 +4,7 @@ import style from "./Favourites.module.scss";
 import { useSelector } from "react-redux";
 
 const Favourites = () => {
-  const favourites = useSelector((state) => state.hotels.favourites);
+  const favourites = useSelector((state) => state.hotelsPage.favourites);
 
   return (
     <>
@@ -15,7 +15,11 @@ const Favourites = () => {
           <input className={style.input} placeholder="Рейтинг" type="number" />
           <input className={style.input} placeholder="Цена" type="number" />
         </div>
-        {favourites.map((i) => <Hotel/>)}
+        <div className={style.favourite}>
+          {favourites.map((i) => (
+            <Hotel />
+          ))}
+        </div>
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import style from "./Search.module.scss";
 import axios from "axios";
+import changeCity from '../../redux/search-reducer'
 
 const Search = () => {
   const dispatch = useDispatch();
@@ -20,8 +21,8 @@ const Search = () => {
       <div className={style.locationBlock}>
         Локация
         <input
-          
-          
+          value={searchData.location}
+          onChange={(e) => {dispatch(changeCity(e.currentTarget.value))}}
           className={style.input}
         />
         Дата заселения

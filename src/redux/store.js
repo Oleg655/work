@@ -4,7 +4,7 @@ import hotelsReducer from "./hotels-reducer";
 
 const reducers = combineReducers({
   searchData: searchReducer,
-  hotels: hotelsReducer,
+  hotelsPage: hotelsReducer,
 });
 
 const store = createStore(reducers);

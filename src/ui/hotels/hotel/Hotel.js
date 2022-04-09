@@ -1,19 +1,21 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import style from "./Hotel.module.scss";
+import home from '../../../assets/home.png'
+import addFavourites from '../../../redux/hotels-reducer'
 
-const Hotel = () => {
-  const data = useSelector((state) => state.hotels);
-  const date = useSelector((state) => state.searchData.date);
+const Hotel = (props) => {
+
+const dispatch = useDispatch()
 
   return (
     <>
       <div className={style.hotelBlock}>
-        <div className={style.image}></div>
-        <span>{data.name}</span>
-        <div>{date}</div>
-        <div>{data.stars}</div>
-        <div>{data.price}</div>
+        <div className={style.imageBlock} ><img onClick={() => {dispatch(addFavourites(props.hotel.id))}} className={style.image} src={home}/></div>
+        <div className={style.description}>
+          <span>{props.hotel.name}</span>
+        </div>
+        
         <div onClick={() => {}} className={style.like}></div>
       </div>
     </>

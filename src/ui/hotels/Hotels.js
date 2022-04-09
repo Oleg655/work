@@ -1,10 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Hotel from "./hotel/Hotel";
 import style from "./Hotels.module.scss";
 
 const Hotels = () => {
   const dataOfSearch = useSelector((state) => state.searchData);
-  const dataOfHotels = useSelector((state) => state.hotels);
+  const dataOfHotels = useSelector((state) => state.hotelsPage);
 
   return (
     <>
@@ -20,9 +21,12 @@ const Hotels = () => {
         </div>
 
         <div className={style.slider}>
-          {dataOfHotels.images.map((i) => <div>{i}</div>)}
+          {dataOfHotels.images.map((i) => <div><img src={i}/></div>)}
         </div>
-        <div className={style.favourites}>Добавлено в избранное {dataOfHotels.favourites} отеля</div>
+        <div className={style.favourites}>Добавлено в избранное {dataOfHotels.favourites.length} отеля</div>
+        <div className={style.hotels}>
+          {dataOfHotels.hotels.map((i) => <Hotel hotel={i}/>)}
+        </div>
       </div>
     </>
   );
