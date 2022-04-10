@@ -1,17 +1,31 @@
 .hotelBlock {
   display: flex;
-  .imageBlock {
+  justify-content: space-between;
+  margin-top: 15px;
+  .label {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    background: rgb(247, 247, 243);
-    border-radius: 50%;
-    .image {
-      width: 45px;
-      height: 45px;
+    justify-content: space-between;
+    .imageBlock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      background: rgb(247, 247, 243);
+      border-radius: 50%;
+      .styleHome {
+        width: 45px;
+        height: 45px;
+      }
     }
-    
+    .descriptionBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .styleStar {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }

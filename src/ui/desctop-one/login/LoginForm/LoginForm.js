@@ -14,16 +14,16 @@ const LoginForm = () => {
     validate: (values) => {
       const errors = {};
       if (!values.email) {
-        errors.email = "Required";
+        errors.email = "непрвильный email или пароль";
       } else if (
         !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
       ) {
-        errors.email = "Invalid email address";
+        errors.email = "непрвильный email или пароль";
       }
-      if (!values.password) {
-        errors.password = "Required";
-      } else if (values.password.length < 8) {
-        errors.password = "Must be 8 characters or more";
+      if (!values.password || !values.password.match('^[a-zA-Z0-9]+$')) {
+        errors.password = "пароль должен иметь латинские буквы";
+      } else if (values.password.length < 8  ) {
+        errors.password = "минимум 8 символов";
       }
 
       return errors;

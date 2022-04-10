@@ -2,7 +2,18 @@
 @import "../../styles/variables.scss";
 
 .favoutitesBlock {
-  @include sidebar(flex-start);
+  padding: 32px;
+  background: #ffffff;
+
+  width: 360px;
+  height: 410px;
+  border-radius: 16px;
+
+  .rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   .input {
     outline: none;

@@ -9,11 +9,17 @@ const Favourites = () => {
   return (
     <>
       <div className={style.favoutitesBlock}>
-        <h1>Избранное</h1>
+        <div className={style.rating}>
+          <h1>Избранное</h1>
 
-        <div>
-          <input className={style.input} placeholder="Рейтинг" type="number" />
-          <input className={style.input} placeholder="Цена" type="number" />
+          <div>
+            <input
+              className={style.input}
+              placeholder="Рейтинг"
+              type="number"
+            />
+            <input className={style.input} placeholder="Цена" type="number" />
+          </div>
         </div>
         <div className={style.favourite}>
           {favourites.map((i) => (

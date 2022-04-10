@@ -2,8 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import style from "./Search.module.scss";
 import axios from "axios";
-import {changeCity} from "../../redux/search-reducer";
-import {getHotel} from "../../redux/hotels-reducer";
+import { changeCity, setDate } from "../../redux/search-reducer";
+import { getHotel } from "../../redux/hotels-reducer";
 
 const Search = () => {
   const dispatch = useDispatch();
@@ -25,12 +25,20 @@ const Search = () => {
     <>
       <div className={style.locationBlock}>
         <div className={style.data}>Локация</div>
-        <input value={searchData.location} onChange={onChanges} className={style.input} />
+        <input
+          value={searchData.location}
+          onChange={onChanges}
+          className={style.input}
+        />
         <div>Дата заселения</div>
         <input
+          onChange={(e) => {
+            debugger
+            dispatch(setDate(e.currentTarget.value));
+          }}
           className={style.input}
           type="date"
-          value="${searchData.date.day}-${searchData.date.month}-${searchData.date.year}"
+          value={searchData.date}
         />
         <div>Количество дней</div>
         <input value={searchData.days} className={style.input} type="number" />

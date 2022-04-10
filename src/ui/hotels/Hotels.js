@@ -19,7 +19,7 @@ const Hotels = () => {
             <h2>Москва</h2>
           </div>
           <div className={style.date}>
-            <h5>{}</h5>
+            <h5>{date}</h5>
           </div>
         </div>
 
