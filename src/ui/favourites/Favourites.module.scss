@@ -1,13 +1,15 @@
-@import '../../styles/mixins.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
 
 .favoutitesBlock {
   @include sidebar(flex-start);
-  
+
   .input {
     outline: none;
   }
-  .favourite{
-    display: flex
+  .favourite {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
   }
 }

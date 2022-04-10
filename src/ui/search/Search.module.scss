@@ -4,6 +4,9 @@
 .locationBlock {
   @include sidebar(center);
   margin-bottom: 10px;
+  .data{
+    display: block;
+  }
   .input {
     @include formControl(296px);
   }

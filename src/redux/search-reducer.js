@@ -4,7 +4,7 @@ const initialState = {
   location: "Москва",
   date: {
     day: date.getDate(),
-    mounth: date.getMonth(),
+    month: date.getMonth(),
     year: date.getFullYear(),
   },
   days: 1,
@@ -13,6 +13,7 @@ const initialState = {
 const searchReducer = (state = initialState, action) => {
   switch (action.type) {
     case "CHANGE_CITY":
+      debugger
       return {
         ...state,
         location: action.text,
@@ -30,6 +31,7 @@ const searchReducer = (state = initialState, action) => {
 export default searchReducer;
 
 export const changeCity = (text) => {
+  debugger
   return { type: "CHANGE_CITY", text };
 };
 export const changeDays = (newDays) => {

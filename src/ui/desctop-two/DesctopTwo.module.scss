@@ -7,10 +7,19 @@
   .header {
     display: flex;
     justify-content: space-between;
+    .name{
+      margin-left: 10px;
+    }
     .logout {
       cursor: pointer;
       display: flex;
       align-items: center;
+    }
+    .image{
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      margin-left: 10px;
     }
   }
   .desctopBlock {

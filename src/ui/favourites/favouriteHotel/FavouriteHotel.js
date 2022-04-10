@@ -1,11 +1,11 @@
 import React from "react";
-import { useState } from "react";
 import { useDispatch } from "react-redux";
-import style from "./Hotel.module.scss";
+import style from "./FavouriteHotel.module.scss";
 import home from "../../../assets/home.png";
-import { addFavourites } from "../../../redux/hotels-reducer";
+import {deleteFromFavourites} from '../../../redux/hotels-reducer'
 
-const Hotel = (props) => {
+
+const FavoutiteHotel = (props) => {
   const dispatch = useDispatch();
 
   return (
@@ -14,7 +14,7 @@ const Hotel = (props) => {
         <div className={style.imageBlock}>
           <img
             onClick={() => {
-              dispatch(addFavourites(props.hotel));
+              dispatch(deleteFromFavourites(props.hotel));
             }}
             className={style.image}
             src={home}
@@ -22,7 +22,6 @@ const Hotel = (props) => {
         </div>
         <div className={style.description}>
           <span>{props.hotel?.label}</span>
-          <span>{}</span>
         </div>
 
         <div onClick={() => {}} className={style.like}></div>
@@ -31,4 +30,4 @@ const Hotel = (props) => {
   );
 };
 
-export default Hotel;
+export default FavoutiteHotel;
